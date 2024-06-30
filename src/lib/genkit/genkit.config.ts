@@ -18,11 +18,14 @@ import { configureGenkit } from '@genkit-ai/core';
 import { dotprompt } from '@genkit-ai/dotprompt';
 import { firebase } from '@genkit-ai/firebase';
 import { vertexAI } from '@genkit-ai/vertexai';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
   // ...
-  projectId: 'REPLACE_WITH_YOUR_PROJECT_ID',
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
   // ...
 };
 
